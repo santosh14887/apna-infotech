@@ -1,16 +1,26 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-export default function programsLayout({ params }) {
+import trainingPrograms from '@/components/TrainingPrograms';
+
+export default async function programsLayout({ params }) {
+  let {id} = await params;
   return (
     <main className="min-h-screen">
-    < Header />
+      <Header />
 
-    <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
-          {params.id}
+          {id}
         </div>
       </section>
-    <Footer />
+      <Footer />
     </main>
   )
+}
+
+export async function generateStaticParams() {
+  // Ensure each id is a string
+  return trainingPrograms.map(program => ({
+    id: String(program.id),
+  }));
 }

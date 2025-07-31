@@ -1,10 +1,10 @@
  const trainingPrograms = [
-    { name: 'Website Design', href: '/programs/website-design' },
-    { name: 'Laravel', href: '/programs/laravel' },
-    { name: 'ReactJs/ NextJs', href: '/programs/react' },
-    { name: 'NodeJs / NestJs', href: '/programs/node' },
-    { name: 'Codeigniter', href: '/programs/codeigniter' },
-    { name: 'Mobile Development', href: '/programs/mobile' },
-    { name: 'PHP/Wordpress', href: '/programs/php' },
+    { id: 'website-design' ,name: 'Website Design', href: '/programs/website-design' },
+    { id : 'laravel', name: 'Laravel', href: '/programs/laravel' },
+    { id : 'react', name: 'ReactJs/ NextJs', href: '/programs/react' },
+    { id: 'node', name: 'NodeJs / NestJs', href: '/programs/node' },
+    { id : 'codeigniter', name: 'Codeigniter', href: '/programs/codeigniter' },
+    { id : 'mobile', name: 'Mobile Development', href: '/programs/mobile' },
+    { id : 'php', name: 'PHP/Wordpress', href: '/programs/php' },
   ]
   export default trainingPrograms;
