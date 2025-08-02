@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { use } from 'react';
+import InputField from '@/components/input';
 export default function ContactPage() {
   const firstNameRef = useRef();
   const lastNameRef = useRef();
@@ -18,7 +19,7 @@ export default function ContactPage() {
     lastName: '',
     email: '',
     phone: '',
-    subject: '',
+    subject: 'enrollment',
     message: ''
   });
   
@@ -137,7 +138,7 @@ const validateForm = (fields = formFields) => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">support@apnainfotech.com</p>
+                    <p className="text-gray-600">support@stfinfotech.com</p>
                   </div>
                 </div>
 
@@ -186,20 +187,19 @@ const validateForm = (fields = formFields) => {
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      ref={firstNameRef}
-                      value={formFields.firstName}
-                      onChange={(e) => setFormFields({ ...formFields, firstName: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter your first name"
+                    < InputField
+                     type = "text"
+                      name = "firstName"
+                      placeholder = "Enter your first name"
+                      value = {formFields.firstName}
+                      onChange = { (e) => handleChange(e)}
+                      ref = {firstNameRef}
+                      formError={formError}
+                      labelText = "First Name"
+                      labelclassName="block text-sm font-medium text-gray-700 mb-2"
+                      inputclassName="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      errorClass = "text-red-500 text-sm mt-1"
                     />
-                    { formError && formError.firstName && <p className="text-red-500 text-sm mt-1">{formError.firstName}</p> }
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">

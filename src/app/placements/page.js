@@ -9,7 +9,7 @@ export default function PlacementsPage() {
       company: 'TechCorp',
       salary: '$75,000',
       image: 'https://via.placeholder.com/150x150/3B82F6/FFFFFF?text=SJ',
-      testimonial: 'The training at Apna Infotech completely transformed my career. I went from knowing nothing about web development to landing a great job in just 6 months!'
+      testimonial: 'The training at STF Infotech completely transformed my career. I went from knowing nothing about web development to landing a great job in just 6 months!'
     },
     {
       name: 'Michael Chen',

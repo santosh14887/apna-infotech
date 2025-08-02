@@ -41,7 +41,7 @@ export default function FAQPage() {
     },
     {
       question: 'How do I enroll in a course?',
-      answer: 'You can enroll by calling us at +9100000, emailing us at support@apnainfotech.com, or filling out the contact form on our website.'
+      answer: 'You can enroll by calling us at +9100000, emailing us at support@stfinfotech.com, or filling out the contact form on our website.'
     }
   ]
 
@@ -56,7 +56,7 @@ export default function FAQPage() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                              Find answers to common questions about our training programs, enrollment process, 
-               and what makes Apna Infotech the right choice for your career.
+               and what makes STF Infotech the right choice for your career.
             </p>
           </div>
 
